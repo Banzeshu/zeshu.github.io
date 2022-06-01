@@ -1,50 +1,23 @@
-/* 文章页背景 */
-.layout_post>#post {
-    /* 以下代表透明度为0.5 可以自行修改*/
-    background: rgba(255,255,255,.5);
+/* 以下透明度设置 */
+#content-inner {
+    --light_bg_color: hsla(0,0%,100%,0.6);
+    --dark_bg_color: rgba(18,18,18,0.8);
+    --light_page_color: hsla(0,0%,100%,0.5);
+    --dark_page_color: rgba(18,18,18,0.8);
 }
-/* 所有页面背景 */
-#asIDe_content .card-Widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
-    /* 以下代表透明度为0.5 */
-    background: rgba(255,255,255,.5);
+/* 文章页及首页卡片透明 */
+#recent-posts>.recent-post-item,.layout>div:first-child:not(.recent-posts),.layout_post>#page,.layout_post>#post,.read-mode .layout_post>#post {
+    background: var(--light_page_color)
 }
-
-#web_bg{
-    #background-image: url("https://gitee.com/yl1010code/blogPhotoes/raw/master/img1/bg-5.jpg"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
-#background: #FFEFBA;  /* fallback for old browsers */
-#background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
- #background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-​
-​
-​
-background: #2BC0E4;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-​
+/* 侧边栏透明 */
+#aside-content .card-widget {
+    background: var(--light_bg_color)
 }
-​
-/* 主页所有文章页面背景 */
-#aside_content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
-    /* 以下代表透明度为0 */
-    background: rgba(255,255,255,0);
+/*侧边栏深色页面透明 */
+[data-theme=dark] #aside-content .card-widget {
+    background: var(--dark_bg_color)
 }
-/*侧边栏页面*/
-#aside-content>.card-widget  {
-    background: rgba(255,255,255,.6);
-}
-#aside-content>.sticky_layout>.card-widget{
-    background: rgba(255,255,255,.6);
-}
-/*文章页面*/
-.layout>#post{
-    background: rgba(255,255,255,.6);
-}
-/*分类页面*/
-.layout>#page{
-    
-    background: rgba(255,255,255,.6);
-}
-/*时间轴页面*/
-.layout>#archive{
-    background: rgba(255,255,255,.6);
+/*首页深色页面透明 */
+[data-theme=dark] #recent-posts>.recent-post-item,[data-theme=dark] .layout>div:first-child:not(.recent-posts),[data-theme=dark] .layout_post>#page,[data-theme=dark] .layout_post>#post,[data-theme=dark] .read-mode .layout_post>#post {
+    background: var(--dark_page_color)
 }
